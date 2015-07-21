@@ -1,5 +1,5 @@
 # Ubuntu 14.04，Trusty Tahr（可靠的塔尔羊）发行版
-FROM ubuntu:trusty
+FROM daocloud.io/ubuntu:trusty
 
 # 道客船长荣誉出品
 MAINTAINER Captain Dao <support@daocloud.io>
