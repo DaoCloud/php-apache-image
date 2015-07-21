@@ -56,7 +56,7 @@ RUN mkdir -p /app && rm -rf /var/www/html && ln -s /app /var/www/html
 将本地的代码添加到目录，并指定其为当前的工作目录。
 
 ```Dockerfile
-ADD . /app
+COPY . /app
 WORKDIR /app
 ```
 
@@ -121,7 +121,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 
 # 配置默认放置 App 的目录
 RUN mkdir -p /app && rm -rf /var/www/html && ln -s /app /var/www/html
-ADD . /app
+COPY . /app
 WORKDIR /app
 RUN chmod 755 ./start.sh
 
