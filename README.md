@@ -10,7 +10,7 @@
 
 选择 Ubuntu 官方的 14.04 版本为我们依赖的系统镜像。
 
-```Dockerfile
+```dockerfile
 FROM ubuntu:trusty
 ```
 
@@ -18,7 +18,7 @@ FROM ubuntu:trusty
 
 设置镜像的维护者，相当于镜像的作者或发行方。
 
-```Dockerfile
+```dockerfile
 MAINTAINER Captain Dao <support@daocloud.io>
 ```
 
@@ -26,7 +26,7 @@ MAINTAINER Captain Dao <support@daocloud.io>
 
 > 安装依赖包相对比较固定，因此该动作应该尽量提前，这样做有助于提高镜像层的复用率。
 
-```Dockerfile
+```dockerfile
 RUN apt-get update \
     && apt-get -y install \
         curl \
@@ -43,19 +43,19 @@ RUN apt-get update \
 
 用 RUN 命令调用 Linux 命令对 Apache 服务和 PHP 参数进行配置。
 
-```Dockerfile
+```dockerfile
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
 ```
 
 用 RUN 命令调用 mkdir 来准备一个干净的放置代码的目录。
 
-```Dockerfile
+```dockerfile
 RUN mkdir -p /app && rm -rf /var/www/html && ln -s /app /var/www/html
 ```
 
 将本地的代码添加到目录，并指定其为当前的工作目录。
 
-```Dockerfile
+```dockerfile
 COPY . /app
 WORKDIR /app
 ```
@@ -64,7 +64,7 @@ WORKDIR /app
 
 最后指定容器启动的进程。
 
-```Dockerfile
+```dockerfile
 RUN chmod 755 ./start.sh
 EXPOSE 80
 CMD ["./start.sh"]
@@ -78,7 +78,7 @@ CMD ["./start.sh"]
 
 ### 完整 Dockerfile
 
-```Dockerfile
+```dockerfile
 # Ubuntu 14.04，Trusty Tahr（可靠的塔尔羊）发行版
 FROM ubuntu:trusty
 
