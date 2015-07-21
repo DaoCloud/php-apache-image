@@ -6,15 +6,13 @@
 
 ### 制作基础镜像
 
-> 因所有镜像均位于境外服务器，为了确保所有示例能正常运行，DaoCloud 提供了一套境内镜像源，并与官方源保持同步。
-
 选择 Ubuntu 官方的 14.04 版本为我们依赖的系统镜像。
 
 ```dockerfile
 FROM ubuntu:trusty
 ```
 
-> 如果使用 DaoCloud 的镜像源，则指向：`FROM daocloud.io/ubuntu:trusty`
+> 因所有官方镜像均位于境外服务器，为了确保所有示例能正常运行，DaoCloud 提供了一套境内镜像源，并与官方源保持同步。如果使用 DaoCloud 的镜像源，则指向：`FROM daocloud.io/ubuntu:trusty`
 
 设置镜像的维护者，相当于镜像的作者或发行方。
 
@@ -72,9 +70,7 @@ CMD ["./start.sh"]
 
 至此一个 PHP 的基础镜像制作完毕，你可以在本地运行 `docker build` 来构建出这个镜像。
 
-> 也可以将该 Dockerfile 传至代码库通过 DaoCloud 进行云端构建，并同步到私有仓库。
-
-> 由于网络环境的特殊情况，在本地运行 `docker build` 的时间会很长，并且有可能失败。推荐使用 **[DaoCloud 加速器](http://help.daocloud.io/intro/accelerator.html)** 和 DaoCloud 的线上 **[代码构建](http://help.daocloud.io/features/build-flows.html)** 功能。
+> 由于网络环境的特殊情况，在本地运行 `docker build` 的时间会很长，并且有可能失败。推荐使用 **[DaoCloud 加速器](http://help.daocloud.io/intro/accelerator.html)** 和 DaoCloud 的云端 **[代码构建](http://help.daocloud.io/features/build-flows.html)** 功能。
 
 ### 完整 Dockerfile
 
