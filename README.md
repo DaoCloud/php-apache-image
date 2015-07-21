@@ -68,7 +68,7 @@ EXPOSE 80
 CMD ["./start.sh"]
 ```
 
-至此一个 PHP 的基础镜像制作完毕，你可以在本地运行 `docker build` 来构建出这个镜像。
+至此一个 PHP 的基础镜像制作完毕，你可以在本地运行 `docker build -t my-php-base .` 来构建出这个镜像并命名为 `my-php-base`。
 
 > 由于网络环境的特殊情况，在本地运行 `docker build` 的时间会很长，并且有可能失败。推荐使用 **[DaoCloud 加速器](http://help.daocloud.io/intro/accelerator.html)** 和 DaoCloud 的云端 **[代码构建](http://help.daocloud.io/features/build-flows.html)** 功能。
 
