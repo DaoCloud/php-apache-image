@@ -1,4 +1,4 @@
 <?php
-echo "HelloWorld!";
+echo "TestDocker";
 phpinfo();
 ?>
