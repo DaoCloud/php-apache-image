@@ -1,1 +1,2 @@
 image: daocloud/ci-php:5.6
+script:
