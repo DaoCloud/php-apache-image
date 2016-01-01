@@ -17,7 +17,7 @@ FROM ubuntu:trusty
 设置镜像的维护者，相当于镜像的作者或发行方。
 
 ```dockerfile
-MAINTAINER Captain Dao <support@daocloud.io>
+MAINTAINER Captain Da <support@daocloud.io>
 ```
 
 用 RUN 命令调用 apt-get 包管理器安装 PHP 环境所依赖的程序包。
